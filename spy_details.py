@@ -1,4 +1,4 @@
 spy_name = "Bond"
-spy_salutation = "Dr."
+spy_salutation = "Mr."
 spy_age = 23
-random_variable = 4
+spy_rating = 4.7
