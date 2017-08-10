@@ -1,9 +1,15 @@
 #importing spy_details.py file
-from spy_details import spy_name , spy_salutation ,spy_age , spy_rating
+from spy_details import spy_name, spy_salutation, spy_rating, spy_age
+import add_status
+add_status.STATUS_MESSAGES = ['My name is Bond, James Bond', 'Shaken, not stirred.', 'Keeping the British end up, Sir']
+
 #importing start_chat.py
 import start_chat
+
+
 print "Let us get started!"
 question = "Continue as " + spy_salutation + "." + spy_name + "(Y/N)?"
+#question = "Continue as " + spy["salutation"] + "." + spy["name"] + "(Y/N)?"
 existing = raw_input(question)
 
 #validating user's input

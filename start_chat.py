@@ -6,7 +6,8 @@ def start_chat(name , age , rating):
         result = int(raw_input(menu_choices))
         #validating user's input
         if result == 1:
-             pass
+            current_status_message = add_status(current_status_message)
+
         elif (result == 2) :
             show_menu = False
         else:
