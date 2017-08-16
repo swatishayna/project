@@ -1,10 +1,9 @@
-spy_name = "Bond"
-spy_salutation = "Mr."
-spy_age = 23
-spy_rating = 4.7
+##details of default user
+#key will always be string whereas value could be anything
 spy = {
-    "name"       : " bond" ,
-    "salutation" : " Mr." ,
-    "age" : 24 ,
-    "rating" : 4.7
+    "name" : " Bond" ,
+    "salutation" : " Mr.",
+    "age" : 24,
+    "rating" : 4.7,
+    "is_online" : True
 }
