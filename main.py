@@ -17,7 +17,7 @@ elif (existing == "N" or existing == "n") :
     if len(spy["name"]) > 0:  # to check whether spy has input some name or not
         if not spy["name"].isalpha():
             print  "INVALID SPY_NAME INPUT "
-            spy_name = raw_input("ENTER YOUR NAME HERE AGAIN: ")
+            spy["name"] = raw_input("ENTER YOUR NAME HERE AGAIN: ")
         else:
             print "VALID SPY_NAME INPUT"
             spy["salutation"] = raw_input("What should we call you Mr. or Ms?")
@@ -40,10 +40,10 @@ elif (existing == "N" or existing == "n") :
                 start_chat(spy["name"], spy["age"] , spy["rating"], spy["is_online"])
             else:
                 print "You do not satisfy the required age condition. "
+    else:
         print "A spy needs to have valid name.Try again."
-    print "Invalid user"
-
-
 else:
-    print " WrONG CHOICE"
+    print "WRONG CHOICE"
+
+
 
