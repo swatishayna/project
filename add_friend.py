@@ -8,7 +8,8 @@ def add_friend():
          "salutation": " " ,
          "age": 0 ,
          "rating":0.0 ,
-         "is_online": False
+         "is_online": False ,
+         "chats" : []
     }
     new_friend["name"] = raw_input(" Please add your friend's name: ")
     new_friend["salutation"] = raw_input("Are they Mr or Ms ? ")
