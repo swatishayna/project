@@ -1,6 +1,7 @@
 from steganography.steganography import Steganography
 from select_a_friend import select_a_friend
 from datetime import datetime
+from globals import friends
 
 
 def send_message():
@@ -17,11 +18,12 @@ def send_message():
     # successful message
     print "Your message is encrypted successfully"
 
+    # saving the messages
     new_chat = {
-        "message": text ,
-        "time": datetime.now() ,
-        "sent_by_me": False
+        "message": text,
+        "time": datetime.now(),
+        "sent_by_me": True
 
     }
-    select_a_friend()[friend_choice]['chats'].append(new_chat)
+    friends[friend_choice]['chats'].append(new_chat)
     print "Your secret message is ready!"
