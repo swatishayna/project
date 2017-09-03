@@ -1,7 +1,9 @@
 from globals import friends
 
+
 def select_a_friend():
-    counter = 1   #to increase the counter for printing friend from friends
+    # to increase the counter for printing friend from friends, used as flag
+    counter = 1
     for friend in friends :
         print str(counter) + ". " + friend["name"] + "Age : " + str(friend["age"])
         counter = counter + 1

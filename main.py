@@ -48,15 +48,15 @@ elif existing == "N" or existing == "n":
                             # starting chat application
                             start_chat(spy["name"], spy["age"], spy["rating"], spy["is_online"])
                         else:
-                            print"Input rating format is not valid"
+                            print"Input rating format is invalid"
                     else:
                         print "You do not satisfy the required age condition. "
                 else:
-                    print "Input age format is not valid"
+                    print "Input age format is invalid"
             else:
                 print "Enter suitable salutation "
         else:
-            print "Input name format is not valid"
+            print "Input name format is invalid"
     else:
         print "A spy needs to have valid name.Try again."
 else:

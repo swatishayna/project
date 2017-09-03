@@ -9,9 +9,10 @@ from read_message import read_message
 def start_chat(name, age, rating, status):
     from globals import current_status_message
     # validating user's details
-    error_message = None  # variable for storing error message
+    # variable for storing error message
+    error_message = None
     if not (age > 12 < 50):
-        error_message = " INVALID AGE. PROVIDE VALID AGE"
+        error_message = " INVALID AGE. PROVIDE VALID AGE!"
         print error_message
     else:
         welcome_message = "AUTHENTICATION COMPLETED. WELCOME\n  " \
@@ -44,6 +45,9 @@ def start_chat(name, age, rating, status):
                 send_message()
             elif result == 4:
                 read_message()
+            elif result == 5:
+                # creating
+                print " "
             elif result == 6:
                 # close application
                 show_menu = False

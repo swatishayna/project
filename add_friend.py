@@ -27,27 +27,29 @@ def add_friend():
             new_friend["salutation"] = raw_input("Are they Mr or Ms ? ")
             pattern6 = '^[M][r s]$'
             if re.match(pattern6, new_friend["salutation"]) is not None:
-                print "Checking .."
+                print "CHECKING .."
                 new_friend["name"] = new_friend["salutation"] + " " + new_friend["name"]
                 new_friend["age"] = raw_input("Age? ")
                 pattern7 = '^[0-9]+$'
                 if re.match(pattern7, new_friend["age"]) is not None:
                     print "CHECKING..."
                     new_friend["rating"] = raw_input("Spy Rating")
-                    if len(new_friend["name"]) > 0:
-                        if new_friend["age"] > 12 < 50:
+                    pattern7 = '^[0-9]+\.[0-9]+$'
+                    if re.match(pattern7, new_friend["rating"]) is not None:
+                        print "CHECKING.."
+                        if len(new_friend["name"]) > 0 and new_friend["age"] > 12 < 50:
                             # add friend
                             friends.append(new_friend)
                             return len(friends)
                         else:
                             print " Sorry! Invalid entry. We cant add spy with the details you provided"
                     else:
-                        print " Sorry! Invalid entry. We cant add spy with the details you provided"
+                        print " Input friend rating format is invalid"
                 else:
-                    print "Input friend's age format is not valid"
+                    print "Input friend's age format is  invalid"
             else:
-                print "Input friend salutation's format is not valid. "
+                print "Input friend salutation's format is invalid. "
         else:
-            print "Input friend name's format  is not valid"
+            print "Input friend name's format  is invalid"
     else:
         print "Enter valid name to continue "
