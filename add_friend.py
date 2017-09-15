@@ -3,7 +3,7 @@ from globals import friends
 import re
 # importing spy_details.py file
 from spy_details import spy
-
+from colorama import Fore,init
 
 # add new friend
 
@@ -43,14 +43,14 @@ def add_friend():
                             return len(friends)
 
                         else:
-                            print " Sorry! Invalid entry. We cant add spy with the details you provided"
+                            print Fore.RED + " Sorry! Invalid entry. We cant add spy with the details you provided"
                     else:
-                        print " Input friend rating format is invalid"
+                        print Fore.RED +" Input friend rating format is invalid"
                 else:
-                    print "Input friend's age format is  invalid"
+                    print Fore.RED +"Input friend's age format is invalid"
             else:
-                print "Input friend salutation's format is invalid. "
+                print Fore.RED +"Input friend salutation's format is invalid. "
         else:
-            print "Input friend name's format  is invalid"
+            print Fore.RED + "Input friend name's format  is invalid"
     else:
-        print "Enter valid name to continue "
+        print Fore.RED +"Enter valid name to continue "

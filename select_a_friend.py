@@ -1,4 +1,5 @@
 from globals import friends
+from colorama import init, Fore
 import re
 
 
@@ -19,5 +20,5 @@ def select_a_friend():
             if(result>0 and result< counter):
                 return result-1
             else:
-                return "collapsed"
+                return  "collapsed"
 

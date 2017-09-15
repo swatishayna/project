@@ -10,7 +10,7 @@ init()
 def read_chat_history():
     choice = select_a_friend()
     if choice == "error":
-        print Fore.RED+"Wrong choice"+Fore.RESET
+        print Fore.RED + "Wrong choice"+Fore.RESET
     else:
         print (Fore.BLUE + "Messages sent are shown in blue color \n" + Fore.GREEN + " Received Messages and Read Messages are shown in green color:"+Fore.RESET)
         choice = int(choice)

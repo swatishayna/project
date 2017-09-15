@@ -1,5 +1,6 @@
 # import statements
 from globals import STATUS_MESSAGES
+from colorama import init, Fore
 
 # updated status message
 updated_status_message = None
@@ -25,7 +26,7 @@ def add_status(current_status_message):
             updated_status_message = new_status_message
             print "Your updated status message is %s" % updated_status_message
         else:
-            print "You did not provide any status message"
+            print  Fore.RED + "You did not provide any status message"
     elif default.upper() == "Y":
         # counter for serial number of messages
         item_position = 1
@@ -42,7 +43,7 @@ def add_status(current_status_message):
             updated_status_message = STATUS_MESSAGES[message_selection - 1]
             print "Your updated message is: " + updated_status_message
         else:
-            print "Invalid choice. Try again. "
+            print  Fore.RED + "Invalid choice. Try again. "
     else:
-        print "The option you chose is Invalid. "
+        print  Fore.RED + "The option you chose is Invalid. "
     return updated_status_message
