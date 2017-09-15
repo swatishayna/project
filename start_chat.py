@@ -4,6 +4,7 @@ from send_message import send_message
 from read_message import read_message
 from globals import friends
 import time
+import read_chat_history
 from globals import current_status_message
 
 
@@ -54,7 +55,7 @@ def start_chat(name, salutation, age, rating, status):
                 read_message()
             elif result == 5:
                 time.sleep(1)
-                read_chat()
+                read_chat_history()
             elif result == 6:
                 show_menu = False
                 time.sleep(1)
