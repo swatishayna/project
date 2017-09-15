@@ -12,30 +12,31 @@ from globals import current_status_message
 init()
 
 # start_chat() definition
-def start_chat(name, salutation, age, rating, status):
+def start_chat( salutation,name, age, rating, status):
     error_message = None       # variable for storing error message
     if not (age > 12 < 50):   # validating user's details
         error_message = " INVALID AGE. PROVIDE VALID AGE!"
         print error_message
     else:
-        welcome_message = "AUTHENTICATION COMPLETED. WELCOME\n  " \
-                          "Name : " + name + "\n  " \
-                          "Age : " + str(age) + "\n  " \
-                          "Rating: " + str(rating) + "\n  " \
-                          "Proud to have you here"
+
+        welcome_message = Fore.BLUE +"AUTHENTICATION COMPLETED. WELCOME\n  " + \
+                          Fore.BLUE +"Name : " + name + "\n  " + \
+                          Fore.BLUE +"Age : " + str(age) + "\n  "  + \
+                          Fore.BLUE +"Rating: " + str(rating) + "\n  "  + \
+                          Fore.BLUE +"Proud to have you here"
         print welcome_message
 
         # displaying menu for user
         show_menu = True
         while show_menu:
             time.sleep(1)
-            menu_choices = "What do you want to do ?\n" \
-                           " 1.ADD A STATUS UPDATE \n" \
-                           " 2.ADD A FRIEND \n" \
-                           " 3.SEND A SECRET MESSAGE \n" \
-                           " 4.READ A SECRET MESSAGE \n" \
-                           " 5.READ CHATS FROM A USER \n" \
-                           " 6.CLOSE APPLICATION \n"
+            menu_choices = Fore.LIGHTMAGENTA_EX +"What do you want to do ?\n" + Fore.RESET  + \
+                           Fore.LIGHTMAGENTA_EX + " 1.ADD A STATUS UPDATE \n" + Fore.RESET + \
+                           Fore.LIGHTMAGENTA_EX + " 2.ADD A FRIEND \n" + Fore.RESET + \
+                           Fore.LIGHTMAGENTA_EX + " 3.SEND A SECRET MESSAGE \n" + Fore.RESET  + \
+                           Fore.LIGHTMAGENTA_EX + " 4.READ A SECRET MESSAGE \n" + Fore.RESET + \
+                           Fore.LIGHTMAGENTA_EX + " 5.READ CHATS FROM A USER \n" + Fore.RESET + \
+                           Fore.LIGHTMAGENTA_EX + " 6.CLOSE APPLICATION \n  "
             result = int(raw_input(menu_choices))
 
             # validating user's input
@@ -63,7 +64,7 @@ def start_chat(name, salutation, age, rating, status):
             elif result == 6:
                 show_menu = False
                 time.sleep(1)
-                print "Application is closed now."
+                print Fore.RED + "Application is closed now."
             else:
                 print "WRONG CHOICE"  # exit from application
 
