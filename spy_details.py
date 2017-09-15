@@ -1,5 +1,6 @@
 # details of default user
-# key will always be string whereas value could be anything
+
+# introduction of dictionary
 spy = {
     "name": " Bond",
     "salutation": " Mr.",
