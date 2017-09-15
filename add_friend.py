@@ -41,6 +41,7 @@ def add_friend():
                             # add friend
                             friends.append(new_friend)
                             return len(friends)
+
                         else:
                             print " Sorry! Invalid entry. We cant add spy with the details you provided"
                     else:

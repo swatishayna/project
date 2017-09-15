@@ -1,17 +1,16 @@
-# IMPORTING TWO FILES HERE
 from add_status import add_status
 from add_friend import add_friend
 from send_message import send_message
 from read_message import read_message
+from globals import friends
+import time
+from globals import current_status_message
 
 
 # start_chat() definition
-def start_chat(name, age, rating, status):
-    from globals import current_status_message
-    # validating user's details
-    # variable for storing error message
-    error_message = None
-    if not (age > 12 < 50):
+def start_chat(name, salutation, age, rating, status):
+    error_message = None       # variable for storing error message
+    if not (age > 12 < 50):   # validating user's details
         error_message = " INVALID AGE. PROVIDE VALID AGE!"
         print error_message
     else:
@@ -25,6 +24,7 @@ def start_chat(name, age, rating, status):
         # displaying menu for user
         show_menu = True
         while show_menu:
+            time.sleep(1)
             menu_choices = "What do you want to do ?\n" \
                            " 1.ADD A STATUS UPDATE \n" \
                            " 2.ADD A FRIEND \n" \
@@ -36,20 +36,28 @@ def start_chat(name, age, rating, status):
 
             # validating user's input
             if result == 1:
+                time.sleep(1)
                 current_status_message = add_status(current_status_message)
+                time.sleep(1)
+                print 'your status has been updated to :\n' ,current_status_message
 
             elif result == 2:
+                time.sleep(1)
                 number_of_friends = add_friend()
-                print "You have %d friends" % number_of_friends
+                print 'You have %d friends' % number_of_friends
+
             elif result == 3:
+                time.sleep(1)
                 send_message()
             elif result == 4:
+                time.sleep(1)
                 read_message()
             elif result == 5:
-                # creating
-                print " "
+                time.sleep(1)
+                read_chat()
             elif result == 6:
-                # close application
                 show_menu = False
+                time.sleep(1)
+                print "Application is closed now."
             else:
                 print "WRONG CHOICE"  # exit from application
