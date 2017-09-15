@@ -1,4 +1,5 @@
 from globals import friends
+import re
 
 
 def select_a_friend():
@@ -7,6 +8,16 @@ def select_a_friend():
     for friend in friends :
         print str(counter) + ". " + friend["name"] + "Age : " + str(friend["age"])
         counter = counter + 1
-    result = int(raw_input("Select from the list : "))
-    return result-1
+        while True:
+            result = int(raw_input("Select from the list : "))
+            pattern19 = "^[0-9]+$"
+            if re.match(pattern19 ,result, flags=0)!=None:
+                break
+            else:
+                print "Input INTEGER VALUE "
+            result = int(result)
+            if(result>0 and result< counter):
+                return result-1
+            else:
+                return "collapsed"
 

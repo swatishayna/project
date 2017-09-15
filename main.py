@@ -3,7 +3,7 @@ from spy_details import spy
 # importing start_chat.py file
 from start_chat import start_chat
 import re
-
+from colorama import Fore,init
 
 print "LET US GET STARTED "
 
@@ -49,16 +49,16 @@ elif existing == "N" or existing == "n":
                             # starting chat application
                             start_chat(spy["name"], spy["age"], spy["rating"], spy["is_online"])
                         else:
-                            print"Input rating format is invalid"
+                            print Fore.RED + "Input rating format is invalid"
                     else:
-                        print "You do not satisfy the required age condition. "
+                        print Fore.RED + "You do not satisfy the required age condition. "
                 else:
-                    print "Input age format is invalid"
+                    print Fore.RED + "Input age format is invalid"
             else:
-                print "Enter suitable salutation "
+                print Fore.RED + "Enter suitable salutation "
         else:
-            print "Input name format is invalid"
+            print Fore.RED + "Input name format is invalid"
     else:
-        print "A spy needs to have valid name.Try again."
+        print Fore.RED + "A spy needs to have valid name.Try again."
 else:
-    print "Wrong Choice"
+    print Fore.RED + "Wrong Choice"

@@ -5,8 +5,11 @@ from read_message import read_message
 from globals import friends
 import time
 import read_chat_history
+from colorama import Fore,init
 from globals import current_status_message
 
+
+init()
 
 # start_chat() definition
 def start_chat(name, salutation, age, rating, status):
@@ -46,6 +49,7 @@ def start_chat(name, salutation, age, rating, status):
                 time.sleep(1)
                 number_of_friends = add_friend()
                 print 'You have %d friends' % number_of_friends
+                friends_list()
 
             elif result == 3:
                 time.sleep(1)
@@ -62,3 +66,10 @@ def start_chat(name, salutation, age, rating, status):
                 print "Application is closed now."
             else:
                 print "WRONG CHOICE"  # exit from application
+
+
+def friends_list():
+    position=1;
+    for i in friends:
+        print position, ". " + i.get_name();
+        position = position + 1;
