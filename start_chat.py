@@ -7,30 +7,19 @@ import time
 import read_chat_history
 from colorama import Fore, init
 import spy_details
-import spy_info
+import spy_info_class
 
 init()
 
 
 # start_chat() definition
-def start_chat( name, age, rating, status):
+def start_chat( spy):
     from globals import current_status_message
     error_message = None  # variable for storing error message
-    if not (age > 12 < 50):  # validating user's details
-        error_message = " INVALID AGE. PROVIDE VALID AGE!"
-        print error_message
-    else:
 
-        welcome_message = Fore.BLUE + "AUTHENTICATION COMPLETED. WELCOME\n  " + \
-                          Fore.BLUE + "Name : " + name + "\n  " + \
-                          Fore.BLUE + "Age : " + str(age) + "\n  " + \
-                          Fore.BLUE + "Rating: " + str(rating) + "\n  " + \
-                          Fore.BLUE + "Proud to have you here"
-        print welcome_message
-
-        # displaying menu for user
-        show_menu = True
-        while show_menu:
+    # displaying menu for user
+    show_menu = True
+    while show_menu:
             time.sleep(1)
             menu_choices = Fore.LIGHTMAGENTA_EX + "What do you want to do ?\n" + Fore.RESET + \
                            Fore.LIGHTMAGENTA_EX + " 1.ADD A STATUS UPDATE \n" + Fore.RESET + \

@@ -1,4 +1,6 @@
-class spy_info:
+class Spy_Info:
+
+
     name = "James"
     salutation = "Mr."
     age = 45

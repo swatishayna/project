@@ -2,7 +2,7 @@
 from globals import friends
 import re
 # importing spy_details.py file
-from spy_details import spy
+
 from colorama import Fore,init
 
 # add new friend
