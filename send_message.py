@@ -25,6 +25,6 @@ def send_message():
         "sent_by_me": True
 
     }
-    friends[friend_choice]['chats'].append(new_chat)
+
+    friends[friend_choice].get_chats().append(new_chat)
     print "Your secret message is ready!"
-4

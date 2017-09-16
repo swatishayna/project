@@ -1,4 +1,4 @@
-from add_status import add_status
+from add_status import add_status,STATUS_MESSAGES
 from add_friend import add_friend
 from send_message import send_message
 from read_message import read_message
@@ -6,13 +6,15 @@ from globals import friends
 import time
 import read_chat_history
 from colorama import Fore, init
-from globals import current_status_message
+import spy_details
+import spy_info
 
 init()
 
 
 # start_chat() definition
 def start_chat( name, age, rating, status):
+    from globals import current_status_message
     error_message = None  # variable for storing error message
     if not (age > 12 < 50):  # validating user's details
         error_message = " INVALID AGE. PROVIDE VALID AGE!"
@@ -50,17 +52,17 @@ def start_chat( name, age, rating, status):
                 time.sleep(1)
                 number_of_friends = add_friend()
                 print 'You have %d friends' % number_of_friends
-
+                show_friends();
 
             elif result == 3:
                 time.sleep(1)
                 send_message()
             elif result == 4:
                 time.sleep(1)
-                read_message()
+                read_message();
             elif result == 5:
                 time.sleep(1)
-                read_chat_history()
+                read_chat_history();
             elif result == 6:
                 show_menu = False
                 time.sleep(1)
@@ -69,3 +71,8 @@ def start_chat( name, age, rating, status):
                 print "WRONG CHOICE"  # exit from application
 
 
+def show_friends():
+    position = 1
+    for i in friends:
+        print position, ". " + i.get_name()
+        position = position + 1
