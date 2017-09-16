@@ -13,7 +13,7 @@ existing = raw_input(question)
 # to check whether the user wants to continue as default user or not
 if existing == "Y" or existing == "y":
     spy["name"] = spy["salutation"] + " " + spy["name"]
-    start_chat(spy["salutation"],spy["name"], spy["age"], spy["rating"], spy["is_online"])
+    start_chat(spy["name"], spy["age"], spy["rating"], spy["is_online"])
 elif existing == "N" or existing == "n":
     spy["name"] = raw_input("Provide your name here :")  # raw_input(): function that returns string only
     # validating user's input
@@ -47,7 +47,7 @@ elif existing == "N" or existing == "n":
                                 print "need improvement"
                             spy["is_online"] = True
                             # starting chat application
-                            start_chat(spy["salutation"], spy["name"], spy["age"], spy["rating"], spy["is_online"])
+                            start_chat(spy["name"], spy["age"], spy["rating"], spy["is_online"])
                         else:
                             print Fore.RED + "Input rating format is invalid"
                     else:

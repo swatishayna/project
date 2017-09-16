@@ -27,3 +27,4 @@ def send_message():
     }
     friends[friend_choice]['chats'].append(new_chat)
     print "Your secret message is ready!"
+4

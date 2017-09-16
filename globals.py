@@ -8,9 +8,5 @@ STATUS_MESSAGES = ["My name is Bond, James Bond", "Shaken , not stirred.", "Keep
 
 # list to store user's friends information
 friends = []
-friends={
-    'name':None,
-    'age':None,
-    'rating':None,
-    'is_online':None
-}
+
+
