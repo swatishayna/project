@@ -62,6 +62,6 @@ def start_chat( spy):
 
 def show_friends():
     position = 1
-    for i in friends:
-        print position, ". " + i.get_name()
+    for counter in friends:
+        print position, ". " + counter.get_name()
         position = position + 1

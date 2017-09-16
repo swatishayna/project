@@ -7,6 +7,7 @@ from globals import friends
 def send_message():
     # choose a friend from the list
     friend_choice = select_a_friend()
+    friend_choice = int(friend_choice)
 
     # prepare the message
     original_image = raw_input("What is the name of the image?")

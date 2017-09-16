@@ -1,8 +1,7 @@
 # import statements
 from globals import friends
 import re
-# importing spy_details.py file
-
+import spy_info_class
 from colorama import Fore,init
 
 # add new friend
@@ -19,7 +18,7 @@ def add_friend():
             "chats": []
         }
     new_friend["name"] = raw_input("Please add your friend's name: ")
-    if len(spy["name"]) > 0:
+    if len(new_friend["name"]) > 0:
         # regular expression which matches only alphabets
         pattern5 = '^[a-zA-Z\s]+$'
         if re.match(pattern5, new_friend["name"]) is not None:
