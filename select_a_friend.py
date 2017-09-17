@@ -15,7 +15,7 @@ def select_a_friend():
         while True:
             result = raw_input("Select from the list : ")
 
-            pattern19 = "^[0-9]+$"
+            pattern19 = '^[0-9]+$'
             if re.match(pattern19, result) is not None:
                 break
             else:

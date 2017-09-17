@@ -12,6 +12,7 @@ def read_message():
 
     encrypted_image = raw_input("What is the name of the file? ")
     secret_message = Steganography.decode(encrypted_image)
+    print secret_message
 
 
     new_chat = {
