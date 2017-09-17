@@ -4,13 +4,9 @@ import re
 import spy_info_class
 from colorama import Fore,init
 
-# add new friend
-msg=[]
-
 def add_friend():
 
-    new_friend = \
-        {
+    new_friend = {
             "name": " ",
             "salutation": " ",
             "age": 0,
@@ -26,7 +22,7 @@ def add_friend():
         if re.match(pattern5, new_friend["name"]) is not None:
             # string matched
             new_friend["salutation"] = raw_input("Are they Mr or Ms ? ")
-            pattern6 = '^[M][r s]$'
+            pattern6 = '^[Mm][r s]$'
             if re.match(pattern6, new_friend["salutation"]) is not None:
                 print "CHECKING .."
                 new_friend["name"] = new_friend["salutation"] + " " + new_friend["name"]

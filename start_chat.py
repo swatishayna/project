@@ -4,7 +4,7 @@ from send_message import send_message
 from read_message import read_message
 from globals import friends
 import time
-from read_chat_history import test,read_chat_history
+from read_chat_history import read_chat_history
 from colorama import Fore, init
 import spy_details
 from spy_info_class import Spy_Info
