@@ -1,3 +1,4 @@
+import spy_details
 class Spy_Info:
 
 
@@ -7,6 +8,8 @@ class Spy_Info:
     rating = 4.9
     is_online = True
     chats = []
+    friends = []
+
 
     def set_details(self, name, salutation, age, rating, is_online):
         self.name = name;

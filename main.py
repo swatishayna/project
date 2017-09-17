@@ -48,7 +48,7 @@ elif existing == "N" or existing == "n":
                                 print "need improvement"
                             spy_is_online = True
                             # starting chat application
-                            start_chat(spy_name,salutation, spy_age, spy_rating, spy_is_online)
+                            start_chat(si)
                         else:
                             print Fore.RED + "Input rating format is invalid"
                     else:

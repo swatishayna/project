@@ -7,13 +7,14 @@ import time
 import read_chat_history
 from colorama import Fore, init
 import spy_details
-import spy_info_class
+from spy_info_class import Spy_Info
 
 init()
 
 
 # start_chat() definition
 def start_chat( spy):
+    sr = Spy_Info()
     from globals import current_status_message
     error_message = None  # variable for storing error message
 
@@ -61,7 +62,7 @@ def start_chat( spy):
 
 
 def show_friends():
-    position = 1
-    for counter in friends:
-        print position, ". " + counter.get_name()
-        position = position + 1
+    counter = 1
+    for friend in friends:
+        print str(counter) + ". " + friend["name"] + "  : " + str(friend["age"] + " : " + friend["rating"])
+        counter = counter + 1

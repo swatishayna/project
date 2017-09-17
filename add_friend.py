@@ -8,6 +8,7 @@ from colorama import Fore,init
 
 
 def add_friend():
+
     new_friend = \
         {
             "name": " ",
@@ -17,6 +18,7 @@ def add_friend():
             "is_online": False,
             "chats": []
         }
+
     new_friend["name"] = raw_input("Please add your friend's name: ")
     if len(new_friend["name"]) > 0:
         # regular expression which matches only alphabets
@@ -32,6 +34,7 @@ def add_friend():
                 pattern7 = '^[0-9]+$'
                 if re.match(pattern7, new_friend["age"]) is not None:
                     print "CHECKING..."
+
                     new_friend["rating"] = raw_input("Spy Rating")
                     pattern7 = '^[0-9]+\.[0-9]+$'
                     if re.match(pattern7, new_friend["rating"]) is not None:
