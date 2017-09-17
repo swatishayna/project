@@ -13,12 +13,13 @@ def select_a_friend():
         print str(counter) + ". " + friend["name"] + "Age : " + str(friend["age"])
         counter = counter + 1
         while True:
-            result = int(raw_input("Select from the list : "))
+            result = raw_input("Select from the list : ")
 
-            f = open( str(result))
-            lines = f.read()
-            match = re.findall('^[0-9]+$' , lines)
-            print match
+            pattern19 = "^[0-9]+$"
+            if re.match(pattern19, result) is not None:
+                break
+            else:
+                print " input integer value"
             result = int(result)
             if result > 0 and result < counter:
                 return result-1
