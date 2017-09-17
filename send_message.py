@@ -4,15 +4,18 @@ from datetime import datetime
 from globals import friends
 from colorama import Fore, init
 import spy_info_class
-
+from add_friend import msg
 init()
 def send_message():
+    print "send start"
     # choose a friend from the list
     friend_choice = select_a_friend()
+    print "friend select"
+    #print select_a_friend
     if (friend_choice == "error"):
         print Fore.RED + "wrong choice" + Fore.RESET
     else:
-        friend_choice = (select_a_friend())
+        #friend_choice = (select_a_friend())
 
         # prepare the message
         original_image = raw_input("What is the name of the image?")
@@ -23,6 +26,7 @@ def send_message():
 
             # successful message
         print "Your message is encrypted successfully"
+        msg.append(text)
 
     # saving the messages
     new_chat = {

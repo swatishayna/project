@@ -5,7 +5,7 @@ import spy_info_class
 from colorama import Fore,init
 
 # add new friend
-
+msg=[]
 
 def add_friend():
 

@@ -21,5 +21,4 @@ def read_message():
         "sent_by_me": False
 
     }
-    friends[sender]['chats'].append(new_chat)
-    print "Your secret message has been saved!"
+

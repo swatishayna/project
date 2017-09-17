@@ -4,7 +4,7 @@ from send_message import send_message
 from read_message import read_message
 from globals import friends
 import time
-import read_chat_history
+from read_chat_history import test,read_chat_history
 from colorama import Fore, init
 import spy_details
 from spy_info_class import Spy_Info
@@ -15,6 +15,7 @@ init()
 # start_chat() definition
 def start_chat( spy):
     sr = Spy_Info()
+
     from globals import current_status_message
     error_message = None  # variable for storing error message
 
@@ -52,7 +53,7 @@ def start_chat( spy):
                 read_message();
             elif result == 5:
                 time.sleep(1)
-                read_chat_history();
+                read_chat_history()
             elif result == 6:
                 show_menu = False
                 time.sleep(1)

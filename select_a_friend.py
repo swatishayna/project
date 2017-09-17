@@ -9,6 +9,7 @@ init()
 def select_a_friend():
     # to increase the counter for printing friend from friends, used as flag
     counter = 1
+    print "friend start"
     for friend in friends:
         print str(counter) + ". " + friend["name"] + "Age : " + str(friend["age"])
         counter = counter + 1
