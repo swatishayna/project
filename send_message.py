@@ -3,10 +3,18 @@ from select_a_friend import select_a_friend
 from datetime import datetime
 from globals import friends
 from colorama import Fore, init
+from main import si
 #import spy_info_class
 init()
+
+# saving the messages
+class New_Chat :
+    message = ''
+    time = datetime.now()
+    sent_by_me = True
+
 def send_message():
-    print "send start"
+    chat_obj = New_Chat()
     # choose a friend from the list
     friend_choice = select_a_friend()
 
@@ -20,16 +28,10 @@ def send_message():
         # successful message
         print "Your message is encrypted successfully"
 
-
-        # saving the messages
-        new_chat = {
-            "message": text,
-            "time": datetime.now(),
-            "sent_by_me": True
-        }
+        chat_obj.message = text
 
         #  save message
-        friends[friend_choice]['chats'].append(new_chat)
+        si.chats.append(chat_obj)
         print " done"
     else:
         print "wrong choice"

@@ -7,17 +7,17 @@ import time
 from read_chat_history import read_chat_history
 from colorama import Fore, init
 import spy_details
-from spy_info_class import Spy_Info
 
 init()
 
 
 # start_chat() definition
-def start_chat( spy):
-    sr = Spy_Info()
+def start_chat(spy):
 
     from globals import current_status_message
     error_message = None  # variable for storing error message
+
+    print Fore.GREEN + "Authentication complete." + Fore.RESET + "\nWelcome " + spy.get_name() + "\n" + "age: ", spy.get_age(), "\nRating: ", spy.get_rating(), "\nOnline: ", spy.get_online();
 
     # displaying menu for user
     show_menu = True
@@ -29,7 +29,7 @@ def start_chat( spy):
                            Fore.LIGHTMAGENTA_EX + " 3.SEND A SECRET MESSAGE \n" + Fore.RESET + \
                            Fore.LIGHTMAGENTA_EX + " 4.READ A SECRET MESSAGE \n" + Fore.RESET + \
                            Fore.LIGHTMAGENTA_EX + " 5.READ CHATS FROM A USER \n" + Fore.RESET + \
-                           Fore.LIGHTMAGENTA_EX + " 6.CLOSE APPLICATION \n  "
+                           Fore.LIGHTMAGENTA_EX + " 6.CLOSE APPLICATION \n  " + Fore.RESET
             result = int(raw_input(menu_choices))
 
             # validating user's input
@@ -43,14 +43,14 @@ def start_chat( spy):
                 time.sleep(1)
                 number_of_friends = add_friend()
                 print 'You have %d friends' % number_of_friends
-                show_friends();
+                show_friends()
 
             elif result == 3:
                 time.sleep(1)
                 send_message()
             elif result == 4:
                 time.sleep(1)
-                read_message();
+                read_message()
             elif result == 5:
                 time.sleep(1)
                 read_chat_history()
@@ -65,5 +65,5 @@ def start_chat( spy):
 def show_friends():
     counter = 1
     for friend in friends:
-        print str(counter) + ". " + friend["name"] + "  : " + str(friend["age"] + " : " + friend["rating"])
+        print str(counter) + ". " + friend.name + "  : "
         counter = counter + 1
